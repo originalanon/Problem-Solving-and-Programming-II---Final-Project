@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1564188523 source:c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\main.cpp
+	<iostream>
+	"players.h"
+	"snakes.h"
+	"ladder.h"
+	"game.h"
+	"board.h"
+
+1563856691 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\gameboard.h
+	<iostream>
+
+1564188146 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\players.h
+	<iostream>
+	<string>
+
+1564015745 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\snake.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+
+1564188789 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\ladder.h
+	"snakes.h"
+	"players.h"
+
+1564188205 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\game.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"players.h"
+
+1564188307 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\board.h
+	"players.h"
+
+1564188366 c:\users\linds\desktop\college\odu (summer 2019)\problem solving and programming 2\final project\final project\snakes.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"players.h"
+

@@ -1,0 +1,79 @@
+#include<iostream>
+#include<string>
+#include "snakes.h"
+#include "ladder.h"
+
+#ifndef PLAYERS_H_INCLUDED
+#define PLAYERS_H_INCLUDED
+
+using namespace std;
+
+class Players{
+public:
+    Players(string n = "NULL", int s = 0, int p = 0){
+        name = n;
+        score = s;
+        position = p;
+    }
+
+    void setName(string n){
+        name = n;
+    }
+
+    string getName(){
+        return name;
+    }
+
+    void setScore(int i){
+        score = i;
+    }
+
+    int getScore(){
+        return score;
+    }
+
+    void setPosition(int p){
+        position = p;
+    }
+
+    int getPosition(){
+        return position;
+    }
+
+private:
+    string name;
+    int score, position;
+};
+
+void EnterPlayerNames(Players & player1, Players & player2){ //Gets players names
+    string name;
+    cout<<"Welcome to Snakes and Ladders! \r\nPlease enter player 1's name:";
+    cin>>name;
+    player1.setName(name);
+
+    cout<<"Please enter player 2's name:";
+    cin>>name;
+    player2.setName(name);
+}
+
+void notifyPlayer(Players winner){
+    cout<<"Congratulations, "<<winner.getName()<<"! You won with a score of: "<<winner.getScore()<<endl;
+    cout<<"Thank you for playing!"<<endl;
+}
+
+void takeTurn(Players &player, int &snakeHeads, int &ladderBottoms, Snake &snakes, Ladder &ladders){
+    cout<<player.getName()<<"'s position: "<<player.getPosition()<<endl;
+
+            rollDie(player);
+
+            for(int i = 1; i < 5; i++){
+                if(player.getPosition() == snakeHeads[i - 1]){
+                    snakes[i - 1].steppedOnHead(player);
+                }
+                else if(player.getPosition() == ladderBottoms[i - 1]){
+                    ladders[i - 1].climbedLadder(player);
+                }
+            }
+}
+
+#endif // PLAYERS_H_INCLUDED
